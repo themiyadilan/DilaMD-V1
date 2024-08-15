@@ -7,17 +7,17 @@
 
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "PRABATH-MD~sS1R1CrT#TGXHjYysMbf1raX78FDFMlm-SBv3mdFTXj0APiKrv5s",
       "required": true
     },  
 
     "ALIVE_IMG": {
-      "description": "Put your alive img here.",
+      "description": "https://telegra.ph/file/ee0bcab04fdd5f2ab00e9.jpg",
       "required": true
     },
     
     "ALIVE_MSG": {
-      "description": "Put your alive msg here.",
+      "description": "hi",
       "required": true
     }   
 },
