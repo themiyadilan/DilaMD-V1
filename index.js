@@ -180,35 +180,3 @@ connectToWA()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const { proto } = require('@whiskeysockets/baileys');
-
-// Listen for new messages (including status updates)
-sock.ev.on('messages.upsert', async (m) => {
-    const msg = m.messages[0];
-
-    // Check if the message is a status update
-    if (msg.messageStubType === proto.WebMessageInfo.WebMessageInfoStubType.STATUS) {
-        console.log('New Status Update:', msg.key.remoteJid);
-
-        // Automatically mark the status as viewed
-        await sock.sendReadReceipt(msg.key.remoteJid, msg.key.participant, [msg.key.id]);
-        console.log('Status marked as viewed:', msg.key.remoteJid);
-    }
-});
